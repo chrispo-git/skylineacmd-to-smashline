@@ -67,7 +67,7 @@ use smash_script::*;'''
         end = "(fighter: &mut L2CFighterCommon) {"
         isolate = w_f[len(beginning):((len(end)*-1))-1]
         isolate = isolate.lower()
-        w_f = "unsafe fn " + str(isolate) + "fighter: &mut L2CAgentBase) {" + "\n"
+        w_f = "unsafe fn " + str(isolate) + "(fighter: &mut L2CAgentBase) {" + "\n"
         o.append(w_f)
       else:
         o.append("#[fighter_frame_callback]\n" + w_f)
@@ -78,7 +78,7 @@ use smash_script::*;'''
         end = "(fighter: &mut L2CFighterBase) {"
         isolate = w_f[len(beginning):((len(end)*-1))-1]
         isolate = isolate.lower()
-        w_f = "unsafe fn " + str(isolate) + "fighter: &mut L2CAgentBase) {" + "\n"
+        w_f = "unsafe fn " + str(isolate) + "(fighter: &mut L2CAgentBase) {" + "\n"
         o.append(w_f)
       else:
         o.append("#[weapon_frame_callback]\n" + w_f)
